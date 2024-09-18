@@ -17,6 +17,12 @@ const images = [
   "/falling-images/12.png",
   "/falling-images/13.png",
   "/falling-images/14.png",
+  "/falling-images/15.png",
+  "/falling-images/16.png",
+  "/falling-images/17.png",
+  "/falling-images/18.png",
+  "/falling-images/19.png",
+  "/falling-images/20.png",
 ];
 
 const getRandomImage = () => images[Math.floor(Math.random() * images.length)];
