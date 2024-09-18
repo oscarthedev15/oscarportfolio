@@ -16,9 +16,16 @@ const config: Config = {
       },
       keyframes: {
         fall: {
-          "0%": { transform: "translateY(0vh)" },
+          "0%": { transform: "translateY(-5vh)" },
           "100%": { transform: "translateY(100vh)" },
         },
+      },
+      boxShadow: {
+        "prism-hover": "0 4px 20px rgba(255, 0, 0, 0.5)", // Red shadow
+        "wordart-hover": "0 4px 20px rgba(0, 0, 255, 0.5)", // Blue shadow
+      },
+      blur: {
+        extra: "10px",
       },
     },
   },
