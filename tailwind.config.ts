@@ -8,9 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      backgroundImage: {
+        "custom-bg": "url('/images/bg2.gif')",
+      },
+      animation: {
+        fall: "fall linear infinite",
+      },
+      keyframes: {
+        fall: {
+          "0%": { transform: "translateY(0vh)" },
+          "100%": { transform: "translateY(100vh)" },
+        },
       },
     },
   },
