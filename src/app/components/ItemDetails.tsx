@@ -41,7 +41,7 @@ const ItemDetails: React.FC<ItemDetailsProps> = ({ item, onClose }) => {
       transition={{ duration: 0.5 }}
     >
       <div
-        className="w-11/12 md:w-3/5 p-8 rounded-lg shadow-lg flex flex-col items-center"
+        className="w-11/12 md:w-3/5 p-8 rounded-lg shadow-lg flex flex-col items-center overflow-y-auto max-h-full"
         style={{ backgroundColor: bgColor, color: textColor }}
       >
         <img
@@ -50,34 +50,25 @@ const ItemDetails: React.FC<ItemDetailsProps> = ({ item, onClose }) => {
           className="w-full h-48 object-contain mb-4"
         />
         <div className="w-full flex flex-col space-y-2 mb-4">
-          {item.liveLink && (
+          {item.liveLinks.map((link, index) => (
             <a
-              href={item.liveLink}
+              key={index}
+              href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 flex items-center"
+              className="text-blue-500 flex items-center p-2 bg-gray-200 rounded"
             >
-              <FaLink /> Live Link
+              <FaLink className="mr-2" /> {link.name}
             </a>
-          )}
-          {item.liveLink2 && (
-            <a
-              href={item.liveLink2}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 flex items-center"
-            >
-              <FaLink /> Live Link 2
-            </a>
-          )}
+          ))}
           {item.githubLink && (
             <a
               href={item.githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 flex items-center"
+              className="text-blue-500 flex items-center p-2 bg-gray-200 rounded"
             >
-              <FaGithub /> GitHub Link
+              <FaGithub className="mr-2" /> GitHub Link
             </a>
           )}
         </div>

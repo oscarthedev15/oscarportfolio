@@ -1,8 +1,7 @@
 export interface Item {
   src: string;
   title: string;
-  liveLink: string | null;
-  liveLink2?: string | null;
+  liveLinks: { name: string; url: string }[]; // Updated to an array of objects
   githubLink: string | null;
   description: string;
 }

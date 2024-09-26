@@ -12,11 +12,23 @@ export default function Home() {
     setShowAnimatedItems(true);
   };
 
+  const handleReset = () => {
+    setShowAnimatedItems(false);
+  };
+
   return (
     <div className="min-h-screen bg-custom-bg flex flex-col items-center justify-center relative z-10 overflow-hidden p-10">
       <AnimatePresence>
         {showAnimatedItems ? (
-          <AnimatedItems />
+          <>
+            <AnimatedItems />
+            <img
+              src="/images/prism.gif"
+              alt="Prism"
+              className="absolute top-4 left-4 w-16 h-16 z-30 cursor-pointer"
+              onClick={handleReset}
+            />
+          </>
         ) : (
           <>
             <FallingImages />
@@ -31,7 +43,7 @@ export default function Home() {
             <img
               src="/images/wordart.png"
               alt="WordArt"
-              className="w-1/2 md:w-1/4 mt-4 md:mt-8 relative z-20 transition-all duration-300 hover:shadow-wordart-hover p-10"
+              className="w-full md:w-1/4 mt-4 md:mt-8 relative z-20 transition-all duration-300 hover:shadow-wordart-hover p-10"
               onClick={handleClick}
             />
           </>

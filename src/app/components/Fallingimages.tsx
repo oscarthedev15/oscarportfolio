@@ -28,8 +28,8 @@ const images = [
 const getRandomImage = () => images[Math.floor(Math.random() * images.length)];
 
 const getRandomSize = () => {
-  const minSize = 150; // Minimum size in pixels
-  const maxSize = 300; // Maximum size in pixels
+  const minSize = window.innerWidth < 768 ? 50 : 150; // Smaller size for mobile
+  const maxSize = window.innerWidth < 768 ? 100 : 300; // Smaller size for mobile
   return Math.random() * (maxSize - minSize) + minSize;
 };
 
@@ -56,7 +56,7 @@ const FallingImages = () => {
           top: 0, // Start at the top
         },
       ]);
-    }, 1000); // Add a new image every second
+    }, 500); // Add a new image every second
 
     return () => clearInterval(interval);
   }, []);

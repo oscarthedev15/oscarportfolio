@@ -7,7 +7,13 @@ const items: Item[] = [
   {
     src: "/portfolio-images/nameless.png",
     title: "Nameless Youth Club",
-    liveLink: "https://nameless.nyc/",
+    liveLinks: [
+      { name: "Nameless Homepage", url: "https://nameless.nyc/" },
+      {
+        name: "Nameless About",
+        url: "https://be.nameless.nyc/",
+      },
+    ],
     githubLink: null,
     description:
       "Nameless is an event platform that enhances physical and digital experiences through digital collectibles, gamification, and loyalty programs. Focused on music festivals, sporting events, and brand activations, it helps keep audiences engaged long after events end. Built on the Aptos blockchain, Nameless bridges the gap between real-world events and Web3.",
@@ -15,7 +21,9 @@ const items: Item[] = [
   {
     src: "/portfolio-images/finder_logo.png",
     title: "Finder Goblin Charts",
-    liveLink: "https://example.com/finder",
+    liveLinks: [
+      { name: "Finder Goblin Charts", url: "https://example.com/finder" },
+    ],
     githubLink: null,
     description:
       "Goblin Charts is a website that provides a TikTok-like experience for viewing SPL tokens. It also allows users to search and bookmark tokens.",
@@ -23,7 +31,7 @@ const items: Item[] = [
   {
     src: "/portfolio-images/aptos-logo.png",
     title: "Aptos Code Collision Hackathon",
-    liveLink: "https://example.com/aptos",
+    liveLinks: [{ name: "Live Link", url: "" }],
     githubLink: "https://github.com/austinhatch/on-chain-geo",
     description:
       "This project is a proof of concept that allows users to create 'geo fences' or areas where users can claim tokens on the Aptos blockchain. It is designed to be used at events, providing a unique way to engage participants.",
@@ -31,11 +39,13 @@ const items: Item[] = [
   {
     src: "/portfolio-images/telegram-logo.png",
     title: "Telegram Bots",
-    liveLink: "https://t.me/finderbuybot",
+    liveLinks: [
+      { name: "Finder Buy Bot", url: "https://t.me/finderbuybot" },
+      { name: "Scanner Bot", url: "https://t.me/scanner_oscar_bot" },
+    ],
     githubLink: null,
     description:
-      "I have made several Telegram bots to assist in trading Solana tokens. One bot is a buybot that can be used in any chat. It is pumpfun compatible and allows for user customization. The other is a scanner that will offer basic details on any SPL token.",
-    liveLink2: "https://t.me/scanner_oscar_bot",
+      "Finder buy bot is a buybot that can be used in any chat to provide real-time buy notifications. It is pumpfun compatible and allows for user customization. Scanner bot is a Telegram bot that will offer basic details on any SPL token given the token address or symbol.",
   },
 ];
 
