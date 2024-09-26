@@ -27,6 +27,9 @@ const config: Config = {
       blur: {
         extra: "10px",
       },
+      fontFamily: {
+        mplus: ['"M PLUS Code Latin"', "sans-serif"],
+      },
     },
   },
   plugins: [],
