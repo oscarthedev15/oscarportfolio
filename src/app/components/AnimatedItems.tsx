@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ItemDetails from "./ItemDetails";
 import { Item } from "../types/Item";
-import { FaDiscord, FaTelegram, FaTwitter } from "react-icons/fa";
 import SocialLinksCard from "./SocialLinksCard";
 const items: Item[] = [
   {
