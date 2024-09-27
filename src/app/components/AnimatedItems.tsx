@@ -23,7 +23,7 @@ const items: Item[] = [
     src: "/portfolio-images/finder_logo.png",
     title: "Finder Goblin Charts",
     liveLinks: [
-      { name: "Finder Goblin Charts", url: "https://example.com/finder" },
+      { name: "Finder Goblin Charts", url: "https://finder-flax.vercel.app/" },
     ],
     githubLink: null,
     description:
@@ -48,12 +48,6 @@ const items: Item[] = [
     description:
       "Finder buy bot is a buybot that can be used in any chat to provide real-time buy notifications. It is pumpfun compatible and allows for user customization. Scanner bot is a Telegram bot that will offer basic details on any SPL token given the token address or symbol.",
   },
-];
-
-const socialLinks = [
-  { name: "Discord", url: "https://discord.com", icon: <FaDiscord /> },
-  { name: "Telegram", url: "https://telegram.org", icon: <FaTelegram /> },
-  { name: "Twitter", url: "https://twitter.com", icon: <FaTwitter /> },
 ];
 
 const itemVariants = {

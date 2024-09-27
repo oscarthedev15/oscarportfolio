@@ -3,7 +3,11 @@ import { motion } from "framer-motion";
 import { FaDiscord, FaTelegram, FaTwitter } from "react-icons/fa";
 
 const socialLinks = [
-  { name: "Discord", url: "https://discord.com", icon: <FaDiscord /> },
+  {
+    name: "Discord",
+    url: "discordapp.com/users/plnkerxd",
+    icon: <FaDiscord />,
+  },
   { name: "Telegram", url: "https://t.me/camp0_15", icon: <FaTelegram /> },
   { name: "Twitter", url: "https://twitter.com", icon: <FaTwitter /> },
 ];
