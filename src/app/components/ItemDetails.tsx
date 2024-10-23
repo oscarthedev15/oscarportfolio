@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLink } from "react-icons/fa"; // Import icons
+import { FaGithub, FaLink, FaTimes } from "react-icons/fa"; // Import the close icon
 import { Item } from "../types/Item"; // Import the Item type
 
 interface ItemDetailsProps {
@@ -41,9 +41,16 @@ const ItemDetails: React.FC<ItemDetailsProps> = ({ item, onClose }) => {
       transition={{ duration: 0.5 }}
     >
       <div
-        className="w-11/12 md:w-3/5 p-8 rounded-lg shadow-lg flex flex-col items-center overflow-y-auto max-h-full"
+        className="relative w-11/12 md:w-3/5 p-4 rounded-lg shadow-lg flex flex-col items-center overflow-y-auto max-h-full"
         style={{ backgroundColor: bgColor, color: textColor }}
       >
+        <button
+          onClick={onClose}
+          className="absolute top-2 right-2 text-xl text-gray-700 hover:text-gray-900 bg-white"
+          aria-label="Close"
+        >
+          <FaTimes />
+        </button>
         <img
           src={item.src}
           alt={item.description}
@@ -73,12 +80,6 @@ const ItemDetails: React.FC<ItemDetailsProps> = ({ item, onClose }) => {
           )}
         </div>
         <p className="mb-4">{item.description}</p>
-        <button
-          onClick={onClose}
-          className="px-4 py-2 bg-blue-500 text-white rounded"
-        >
-          Back
-        </button>
       </div>
     </motion.div>
   );
