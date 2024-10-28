@@ -42,10 +42,11 @@ const items: Item[] = [
     liveLinks: [
       { name: "Finder Buy Bot", url: "https://t.me/finderbuybot" },
       { name: "Scanner Bot", url: "https://t.me/finder_scanner_bot" },
+      { name: "Yap Bot", url: "https://t.me/yap_yap_bot" },
     ],
     githubLink: null,
     description:
-      "Finder buy bot is a buybot that can be used in any chat to provide real-time buy notifications for spl tokens. It is pumpfun compatible and allows for user customization.\n Scanner bot offers basic details on any SPL token given the token address or symbol.",
+      "Finder buy bot is a buybot that can be used in any chat to provide real-time buy notifications for spl tokens. It is pumpfun compatible and allows for user customization.\n Scanner bot offers basic details on any SPL token given the token address or symbol.  Yap bot is a telegram bot that tracks group messages and updates the channel Yap Trending with the most active groups (Coming soon to production).",
   },
 ];
 

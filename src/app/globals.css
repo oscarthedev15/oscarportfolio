@@ -22,6 +22,10 @@ body {
   font-family: 'M PLUS Code Latin', sans-serif;
 }
 
+body, * {
+  @apply cursor-none; /* Use Tailwind's apply directive to hide the cursor */
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

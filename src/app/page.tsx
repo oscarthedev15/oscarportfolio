@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import FallingImages from "./components/Fallingimages"; // Adjust the path as necessary
 import AnimatedItems from "./components/AnimatedItems"; // New component
+import AnimatedCursor from "./components/AnimatedCursor"; // New component
 
 export default function Home() {
   const [showAnimatedItems, setShowAnimatedItems] = useState(false);
@@ -22,6 +23,7 @@ export default function Home() {
         <link rel="icon" href="/images/wordart.png" />{" "}
         {/* Add the favicon link */}
       </Head>
+      <AnimatedCursor />
       <AnimatePresence>
         {showAnimatedItems ? (
           <>
