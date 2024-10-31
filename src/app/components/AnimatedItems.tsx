@@ -14,7 +14,7 @@ const items: Item[] = [
         url: "https://be.nameless.nyc/",
       },
     ],
-    githubLink: null,
+    githubLink: "https://github.com/NAMELESS-NYC",
     description:
       "Nameless is an event platform that enhances physical and digital experiences through digital collectibles, gamification, and loyalty programs. Focused on music festivals, sporting events, and brand activations, it helps keep audiences engaged long after events end. Built on the Aptos blockchain, Nameless bridges the gap between real-world events and Web3.",
   },
