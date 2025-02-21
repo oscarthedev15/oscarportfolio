@@ -21,7 +21,7 @@ const AnimatedCursor: React.FC = () => {
   return (
     <div
       ref={cursorRef}
-      className="fixed text-3xl pointer-events-none z-[99999999] transform -translate-x-1/2 -translate-y-1/2"
+      className="fixed text-4xl pointer-events-none z-[99999999] transform -translate-x-1/2 -translate-y-1/2"
       style={{ left: "0px", top: "0px" }}
     >
       👊

@@ -15,38 +15,64 @@ const items: Item[] = [
       },
     ],
     githubLink: "https://github.com/NAMELESS-NYC",
-    description:
-      "Nameless is an event platform that enhances physical and digital experiences through digital collectibles, gamification, and loyalty programs. Focused on music festivals, sporting events, and brand activations, it helps keep audiences engaged long after events end. Built on the Aptos blockchain, Nameless bridges the gap between real-world events and Web3.",
+    description: `Nameless is an event platform that enhances physical and digital experiences
+       through digital collectibles, gamification, and loyalty programs. Focused on 
+       music festivals, sporting events, and brand activations, it helps keep audiences
+        engaged long after events end. Built on the Aptos blockchain, Nameless bridges 
+        the gap between real-world events and Web3.`,
   },
+  // {
+  //   src: "/portfolio-images/finder_logo.png",
+  //   title: "Finder Goblin Charts",
+  //   liveLinks: [
+  //     { name: "Finder Goblin Charts", url: "https://finder-flax.vercel.app/" },
+  //   ],
+  //   githubLink: null,
+  //   description:
+  //     "Goblin Charts is a website that provides a TikTok-like experience for viewing spl tokens. It also allows users to search and bookmark tokens.  It also provides users with a unique feed of promising tokens and allows for setting custom parameters to personalize the experience.",
+  // },
   {
     src: "/portfolio-images/finder_logo.png",
-    title: "Finder Goblin Charts",
-    liveLinks: [
-      { name: "Finder Goblin Charts", url: "https://finder-flax.vercel.app/" },
-    ],
+    title: "Botstars.fun",
+    liveLinks: [{ name: "Botstars.fun", url: "https://botstars.fun/" }],
     githubLink: null,
-    description:
-      "Goblin Charts is a website that provides a TikTok-like experience for viewing spl tokens. It also allows users to search and bookmark tokens.  It also provides users with a unique feed of promising tokens and allows for setting custom parameters to personalize the experience.",
+    description: `Botstars.fun is a website that allows users to create characters and allot them to 
+      post and interact with other characters like a social media platform.  It uses the 
+      dolfin ai model for post generation and character reactions.  It's native token will be 
+      launched soon on Solana.`,
   },
-  {
-    src: "/portfolio-images/aptos-logo.png",
-    title: "Aptos Code Collision Hackathon",
-    liveLinks: [],
-    githubLink: "https://github.com/NAMELESS-NYC/GeoMint",
-    description:
-      "This project is a proof of concept that allows users to create 'geo fences' or areas where users can claim tokens on the Aptos blockchain. It is designed to be used at events, providing a unique way to engage participants.",
-  },
+
+  // {
+  //   src: "/portfolio-images/aptos-logo.png",
+  //   title: "Aptos Code Collision Hackathon",
+  //   liveLinks: [],
+  //   githubLink: "https://github.com/NAMELESS-NYC/GeoMint",
+  //   description:
+  //     "This project is a proof of concept that allows users to create 'geo fences' or areas where users can claim tokens on the Aptos blockchain. It is designed to be used at events, providing a unique way to engage participants.",
+  // },
   {
     src: "/portfolio-images/telegram-logo.png",
     title: "Telegram Bots",
     liveLinks: [
       { name: "Finder Buy Bot", url: "https://t.me/finderbuybot" },
       { name: "Scanner Bot", url: "https://t.me/finder_scanner_bot" },
-      { name: "Yap Bot", url: "https://t.me/yap_yap_bot" },
+      {
+        name: ".ai Domain Checker Bot",
+        url: "https://t.me/domain_finder_ai_bot",
+      },
     ],
     githubLink: null,
-    description:
-      "Finder buy bot is a buybot that can be used in any chat to provide real-time buy notifications for spl tokens. It is pumpfun compatible and allows for user customization.\n Scanner bot offers basic details on any SPL token given the token address or symbol.  Yap bot is a telegram bot that tracks group messages and updates the channel Yap Trending with the most active groups (Coming soon to production).",
+    description: `Finder buy bot is a buybot that can be used in any chat to provide 
+      real-time buy notifications for spl tokens. It is pumpfun compatible 
+      and allows for user customization.
+
+      Scanner bot offers basic details on any SPL token given the token 
+      address or symbol.
+      
+      .ai Domain Checker bot is a telegram bot that checks if a domain is 
+      available for purchase on the .ai domain given a theme. It is uses openai
+      to generate a list of domains based on the theme and then checks if they are
+      available using WHOIS api.`,
   },
 ];
 
