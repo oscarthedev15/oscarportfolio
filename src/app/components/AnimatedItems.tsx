@@ -8,18 +8,14 @@ const items: Item[] = [
     src: "/portfolio-images/nameless.png",
     title: "Nameless Youth Club",
     liveLinks: [
-      { name: "Nameless Homepage", url: "https://nameless.nyc/" },
-      {
-        name: "Nameless About",
-        url: "https://be.nameless.nyc/",
-      },
+      { name: "Nameless Landing Page", url: "https://nameless.nyc/" },
     ],
     githubLink: "https://github.com/NAMELESS-NYC",
-    description: `Nameless is an event platform that enhances physical and digital experiences
-       through digital collectibles, gamification, and loyalty programs. Focused on 
-       music festivals, sporting events, and brand activations, it helps keep audiences
-        engaged long after events end. Built on the Aptos blockchain, Nameless bridges 
-        the gap between real-world events and Web3.`,
+    description: [
+      "Nameless is an event platform that enhances physical and digital experiences through digital collectibles, gamification, and loyalty programs.",
+      "Focused on music festivals, sporting events, and brand activations, it helps keep audiences engaged long after events end.",
+      "Built on the Aptos blockchain, Nameless bridges the gap between real-world events and Web3.",
+    ],
   },
   // {
   //   src: "/portfolio-images/finder_logo.png",
@@ -36,10 +32,11 @@ const items: Item[] = [
     title: "Botstars.fun",
     liveLinks: [{ name: "Botstars.fun", url: "https://botstars.fun/" }],
     githubLink: null,
-    description: `Botstars.fun is a website that allows users to create characters and allot them to 
-      post and interact with other characters like a social media platform.  It uses the 
-      dolfin ai model for post generation and character reactions.  It's native token will be 
-      launched soon on Solana.`,
+    description: [
+      "Botstars.fun is a website that allows users to create characters and allot them to post and interact with other characters like a social media platform.",
+      "It uses the dolfin ai model for post generation and character reactions.",
+      "It's native token will be launched soon on Solana.",
+    ],
   },
 
   // {
@@ -62,17 +59,11 @@ const items: Item[] = [
       },
     ],
     githubLink: null,
-    description: `Finder buy bot is a buybot that can be used in any chat to provide 
-      real-time buy notifications for spl tokens. It is pumpfun compatible 
-      and allows for user customization.
-
-      Scanner bot offers basic details on any SPL token given the token 
-      address or symbol.
-      
-      .ai Domain Checker bot is a telegram bot that checks if a domain is 
-      available for purchase on the .ai domain given a theme. It is uses openai
-      to generate a list of domains based on the theme and then checks if they are
-      available using WHOIS api.`,
+    description: [
+      "Finder buy bot is a buybot that can be used in any chat to provide real-time buy notifications for spl tokens. It is pumpfun compatible and allows for user customization.",
+      "Scanner bot offers basic details on any SPL token given the token address or symbol.",
+      ".ai Domain Checker bot is a bot that checks if a domain is available for purchase on the .ai domain given a theme. It uses OpenAI to generate a list of domains based on the theme and then checks if they are available using WHOIS API.",
+    ],
   },
 ];
 

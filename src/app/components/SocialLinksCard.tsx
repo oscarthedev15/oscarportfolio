@@ -6,7 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 const socialLinks = [
   {
     name: "Discord",
-    url: "https://discord.com",
+    url: "https://discordapp.com/users/plnkerxd",
     icon: <FaDiscord className="text-2xl" />,
   }, // Increase icon size
   {
@@ -16,7 +16,7 @@ const socialLinks = [
   }, // Increase icon size
   {
     name: "Twitter",
-    url: "https://twitter.com",
+    url: "https://x.com/oscarthedev15",
     icon: <FaXTwitter className="text-2xl" />,
   }, // Increase icon size
 ];

@@ -3,5 +3,5 @@ export interface Item {
   title: string;
   liveLinks: { name: string; url: string }[]; // Updated to an array of objects
   githubLink: string | null;
-  description: string;
+  description: string[];
 }

@@ -53,7 +53,7 @@ const ItemDetails: React.FC<ItemDetailsProps> = ({ item, onClose }) => {
         </button>
         <img
           src={item.src}
-          alt={item.description}
+          alt={item.title}
           className="w-full h-48 object-contain mb-4"
         />
         <div className="w-full flex flex-col space-y-2 mb-4">
@@ -79,7 +79,13 @@ const ItemDetails: React.FC<ItemDetailsProps> = ({ item, onClose }) => {
             </a>
           )}
         </div>
-        <p className="mb-4">{item.description}</p>
+        <ul className="mb-4">
+          {item.description.map((desc, index) => (
+            <li key={index} className="list-disc list-inside">
+              {desc}
+            </li>
+          ))}
+        </ul>
       </div>
     </motion.div>
   );
