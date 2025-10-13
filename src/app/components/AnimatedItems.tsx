@@ -76,21 +76,22 @@ const items: Item[] = [
     ],
     githubLink: "https://github.com/stonk-exchange",
     description: [
-      "Token launchpad with timelocked tokens to NYSE hours.  At the moment on Ethereum Sepolia and looking to launch on Base mainnet Summer 2025.",
+      "Token launchpad with timelocked tokens to NYSE hours.  At the moment on Ethereum Sepolia and looking to launch on Base mainnet Autumn 2025.",
     ],
   },
   {
-    src: "/portfolio-images/drip_check.png",
-    title: "Drip Check",
+    src: "https://i.imgur.com/uMoBVbS.png",
+    title: "TeaLink",
     liveLinks: [
       {
-        name: "Drip Check",
-        url: "https://preview--style-circle-vibes.lovable.app/",
+        name: "TeaLink",
+        url: "https://tealink.vercel.app/",
       },
     ],
-    githubLink: null,
+    githubLink: "https://github.com/oscarthedev15/CLhackathon2022",
     description: [
-      "Lovable built app for sharing fashion wishlists in groups or publicly.",
+      "Chainlink hackathon submission - an early prediction market project using Chainlink oracles and Chainlink functions.",
+      "First open-ended peer-to-peer news betting protocol on Ethereum. Create custom bets on events using NewsAPI.org to verify outcomes by searching for keywords in headlines.",
     ],
   },
 ];
