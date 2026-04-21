@@ -29,13 +29,20 @@ const items: Item[] = [
   // },
   {
     src: "/portfolio-images/botstars.png",
-    title: "Botstars.fun",
-    liveLinks: [{ name: "Botstars.fun", url: "https://botstars.fun/" }],
-    githubLink: null,
+    title: "MCP Cybersecurity Suite",
+    liveLinks: [
+      {
+        name: "GitHub Repository",
+        url: "https://github.com/oscarthedev15/mcp-cybersecurity-suite",
+      },
+    ],
+    githubLink: "https://github.com/oscarthedev15/mcp-cybersecurity-suite",
     description: [
-      "Botstars.fun is a website that allows users to create characters and allow them to post and interact with other characters like a social media platform.",
-      "It uses the dolfin ai model for post generation and character reactions.",
-      "It's native token will be launched soon on Solana.",
+      "Open-source suite of Model Context Protocol (MCP) servers purpose-built for cybersecurity operations.",
+      "Includes domain-specific servers for IP threat intelligence, WHOIS and DNS, NVD CVE search, Shodan reconnaissance, MITRE ATT&CK, and KEV exploit intelligence.",
+      "Designed for streamable-http clients like Claude and Cursor, with stateless per-request credentials and multi-tenant-safe routing behind nginx.",
+      "Security-focused deployment: non-root containers, read-only root filesystems, dropped Linux capabilities, and Kubernetes network policy restrictions.",
+      "Supports local development and production deployments via Docker Compose and Kubernetes with hardened defaults.",
     ],
   },
 
@@ -49,20 +56,20 @@ const items: Item[] = [
   // },
   {
     src: "/portfolio-images/telegram-logo.png",
-    title: "Telegram Bots",
+    title: "Schwab Portfolio Telegram Bot",
     liveLinks: [
-      { name: "Finder Buy Bot", url: "https://t.me/finderbuybot" },
-      { name: "Scanner Bot", url: "https://t.me/finder_scanner_bot" },
       {
-        name: ".ai Domain Checker Bot",
-        url: "https://t.me/domain_finder_ai_bot",
+        name: "GitHub Repository",
+        url: "https://github.com/oscarthedev15/schwab-tg-bot",
       },
     ],
-    githubLink: null,
+    githubLink: "https://github.com/oscarthedev15/schwab-tg-bot",
     description: [
-      "Finder buy bot is a buybot that can be used in any chat to provide real-time buy notifications for spl tokens. It is pumpfun compatible and allows for user customization.",
-      "Scanner bot offers basic details on any SPL token given the token address or symbol.",
-      ".ai Domain Checker bot is a bot that checks if a domain is available for purchase on the .ai domain given a theme. It uses OpenAI to generate a list of domains based on the theme and then checks if they are available using WHOIS API.",
+      "Clean, modular Telegram bot for managing and analyzing Schwab portfolios with AI-powered market insights.",
+      "Architecture separates Telegram routing, API clients, and service-layer business logic for maintainability and testability.",
+      "Core commands include /portfolio, /marketupdate, /top3holdingupdate, /top3stocksupdate, and /research [ticker].",
+      "Features include holdings pagination, balance privacy toggles, source-cited analysis, and message splitting to handle long Telegram responses.",
+      "Integrates Schwab Trader APIs and OpenAI web search with OAuth token workflows and environment-based configuration.",
     ],
   },
   {
