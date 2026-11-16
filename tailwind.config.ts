@@ -12,12 +12,12 @@ const config: Config = {
         "custom-bg": "url('/images/bg2.gif')",
       },
       animation: {
-        fall: "fall linear infinite",
+        fall: "fall linear forwards",
       },
       keyframes: {
         fall: {
-          "0%": { transform: "translateY(-5vh)" },
-          "100%": { transform: "translateY(100vh)" },
+          "0%": { transform: "translateY(-100%)", opacity: "1" },
+          "100%": { transform: "translateY(100vh)", opacity: "0" },
         },
       },
       boxShadow: {

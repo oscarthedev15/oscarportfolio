@@ -16,6 +16,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "oscar the dev",
   description: "the life's work of oscar the dev",
+  icons: { icon: "/images/wordart.png" },
 };
 
 export default function RootLayout({

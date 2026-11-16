@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ItemDetails from "./ItemDetails";
 import { Item } from "../types/Item";
@@ -74,12 +74,10 @@ const items: Item[] = [
   },
   {
     src: "/portfolio-images/stonk.png",
-    title: "Stonk Terminal",
+    title: "Stonk Market",
     liveLinks: [
-      {
-        name: "Stonk Terminal",
-        url: "https://stonk-terminal-alpha-view.vercel.app/",
-      },
+      { name: "Stonk Market", url: "https://www.stonk.market/" },
+      { name: "Hood Intelligence on X", url: "https://x.com/robindothood" },
     ],
     githubLink: "https://github.com/stonk-exchange",
     description: [
@@ -103,102 +101,41 @@ const items: Item[] = [
   },
 ];
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 100 },
-  visible: { opacity: 1, y: 0 },
-};
-
-const getRandomColor = () => {
-  const letters = "0123456789ABCDEF";
-  let color = "#";
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-};
-
-const getTextColor = (bgColor: string) => {
-  const color = bgColor.substring(1); // Remove the '#'
-  const rgb = parseInt(color, 16); // Convert to integer
-  const r = (rgb >> 16) & 0xff; // Extract red
-  const g = (rgb >> 8) & 0xff; // Extract green
-  const b = (rgb >> 0) & 0xff; // Extract blue
-
-  const brightness = 0.299 * r + 0.587 * g + 0.114 * b;
-  return brightness > 186 ? "black" : "white";
-};
-
 const AnimatedItems = () => {
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const handleItemClick = (item: Item) => {
-    setSelectedItem(item);
-  };
-
-  const handleClose = () => {
-    setSelectedItem(null);
-  };
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        containerRef.current &&
-        !containerRef.current.contains(event.target as Node)
-      ) {
-        handleClose();
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="flex flex-col items-center justify-center space-y-4 md:space-y-0 md:space-x-4"
-    >
-      <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
-        {items.map((item, index) => {
-          const bgColor = getRandomColor();
-          const textColor = getTextColor(bgColor);
-          return (
-            <motion.div
-              key={index}
-              className="flex flex-col md:flex-col items-center p-4 border-2 cursor-pointer font-mplus w-64 h-32 md:w-64 md:h-64"
-              style={{
-                backgroundColor: bgColor,
-                borderColor: getRandomColor(),
-                color: textColor,
-              }}
-              initial="hidden"
-              animate="visible"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              variants={itemVariants}
-              onClick={() => handleItemClick(item)}
+    <div className="w-full max-w-5xl mx-auto flex flex-col items-center gap-10">
+      <ul className="grid w-full gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {items.map((item, index) => (
+          <motion.li
+            key={item.title}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.06, ease: "easeOut" }}
+          >
+            <button
+              type="button"
+              onClick={() => setSelectedItem(item)}
+              className="glass group w-full h-full text-left rounded-2xl p-4 flex flex-col gap-3 transition-transform duration-200 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500"
             >
-              <div className="flex flex-row md:flex-col items-center justify-center h-full w-full">
+              <div className="aspect-[4/3] w-full rounded-xl bg-white/70 flex items-center justify-center overflow-hidden">
                 <img
                   src={item.src}
-                  alt={item.title}
-                  className="w-24 h-24 md:w-full md:h-48 object-contain"
+                  alt=""
+                  className="max-h-[80%] max-w-[80%] object-contain transition-transform duration-300 group-hover:scale-105"
                 />
-                <p className="mt-2 md:mt-0 md:ml-0 ml-2">{item.title}</p>
               </div>
-            </motion.div>
-          );
-        })}
-      </div>
-      <div className="w-full flex justify-center mt-8 pt-8">
-        <SocialLinksCard />
-      </div>
+              <h3 className="font-bold text-lg leading-tight text-neutral-900">{item.title}</h3>
+              <p className="text-sm text-neutral-700 line-clamp-2">{item.description[0]}</p>
+            </button>
+          </motion.li>
+        ))}
+      </ul>
+      <SocialLinksCard />
       <AnimatePresence>
         {selectedItem && (
-          <ItemDetails item={selectedItem} onClose={handleClose} />
+          <ItemDetails item={selectedItem} onClose={() => setSelectedItem(null)} />
         )}
       </AnimatePresence>
     </div>

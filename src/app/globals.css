@@ -32,15 +32,9 @@ body, * {
   }
 }
 
-/* Add this to your global CSS file */
-@media (min-width: 768px) {
-  .md\\:flex-row {
-    flex-direction: row;
-  }
-  .md\\:space-x-4 > * + * {
-    margin-left: 1rem;
-  }
-  .md\\:space-y-0 > * + * {
-    margin-top: 0;
+/* Frosted card used across the projects view */
+@layer components {
+  .glass {
+    @apply bg-white/60 backdrop-blur-md border border-white/70 shadow-[0_8px_30px_rgba(0,0,0,0.12)];
   }
 }
