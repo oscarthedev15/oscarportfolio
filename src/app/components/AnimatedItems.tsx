@@ -7,96 +7,78 @@ const items: Item[] = [
   {
     src: "/portfolio-images/nameless.png",
     title: "Nameless Youth Club",
-    liveLinks: [
-      { name: "Nameless Landing Page", url: "https://nameless.nyc/" },
-    ],
+    tagline: "Collectibles, games and rewards that keep fans engaged after the event ends.",
+    liveLinks: [{ name: "Website", url: "https://nameless.nyc/" }],
     githubLink: "https://github.com/NAMELESS-NYC",
     description: [
-      "Nameless is an event platform that enhances physical and digital experiences through digital collectibles, gamification, and loyalty programs.",
-      "Focused on music festivals, sporting events, and brand activations, it helps keep audiences engaged long after events end.",
-      "AVAX Codebase second place winner of the 2025 Aptos Code Collision Hackathon.",
+      "An event platform that links in-person and online experiences through digital collectibles, gamification and loyalty rewards.",
+      "Built for music festivals, sporting events and brand activations, so audiences stay engaged long after the event ends.",
+      "2nd place at the 2025 Aptos Code Collision Hackathon (AVAX Codebase).",
     ],
   },
-  // {
-  //   src: "/portfolio-images/finder_logo.png",
-  //   title: "Finder Goblin Charts",
-  //   liveLinks: [
-  //     { name: "Finder Goblin Charts", url: "https://finder-flax.vercel.app/" },
-  //   ],
-  //   githubLink: null,
-  //   description:
-  //     "Goblin Charts is a website that provides a TikTok-like experience for viewing spl tokens. It also allows users to search and bookmark tokens.  It also provides users with a unique feed of promising tokens and allows for setting custom parameters to personalize the experience.",
-  // },
   {
     src: "/portfolio-images/botstars.png",
     title: "MCP Cybersecurity Suite",
-    liveLinks: [
-      {
-        name: "GitHub Repository",
-        url: "https://github.com/oscarthedev15/mcp-cybersecurity-suite",
-      },
-    ],
+    tagline: "Open-source MCP servers that give AI assistants security tooling.",
+    liveLinks: [],
     githubLink: "https://github.com/oscarthedev15/mcp-cybersecurity-suite",
     description: [
-      "Open-source suite of Model Context Protocol (MCP) servers purpose-built for cybersecurity operations.",
-      "Includes domain-specific servers for IP threat intelligence, WHOIS and DNS, NVD CVE search, Shodan reconnaissance, MITRE ATT&CK, and KEV exploit intelligence.",
-      "Designed for streamable-http clients like Claude and Cursor, with stateless per-request credentials and multi-tenant-safe routing behind nginx.",
-      "Security-focused deployment: non-root containers, read-only root filesystems, dropped Linux capabilities, and Kubernetes network policy restrictions.",
-      "Supports local development and production deployments via Docker Compose and Kubernetes with hardened defaults.",
+      "Open-source Model Context Protocol (MCP) servers built for security work.",
+      "Covers IP threat intel, WHOIS and DNS, NVD CVE search, Shodan recon, MITRE ATT&CK and CISA KEV exploit data.",
+      "Works with Claude, Cursor and other streamable-HTTP clients. Credentials are passed per request, so it's safe to share across teams behind nginx.",
+      "Hardened by default: non-root, read-only containers, dropped Linux capabilities and locked-down Kubernetes network policies.",
+      "Runs locally with Docker Compose or in production on Kubernetes.",
     ],
   },
-
-  // {
-  //   src: "/portfolio-images/aptos-logo.png",
-  //   title: "Aptos Code Collision Hackathon",
-  //   liveLinks: [],
-  //   githubLink: "https://github.com/NAMELESS-NYC/GeoMint",
-  //   description:
-  //     "This project is a proof of concept that allows users to create 'geo fences' or areas where users can claim tokens on the Aptos blockchain. It is designed to be used at events, providing a unique way to engage participants.",
-  // },
   {
     src: "/portfolio-images/telegram-logo.png",
     title: "Schwab Portfolio Telegram Bot",
-    liveLinks: [
-      {
-        name: "GitHub Repository",
-        url: "https://github.com/oscarthedev15/schwab-tg-bot",
-      },
-    ],
+    tagline: "Check your Schwab portfolio and get AI market research from Telegram.",
+    liveLinks: [],
     githubLink: "https://github.com/oscarthedev15/schwab-tg-bot",
     description: [
-      "Clean, modular Telegram bot for managing and analyzing Schwab portfolios with AI-powered market insights.",
-      "Architecture separates Telegram routing, API clients, and service-layer business logic for maintainability and testability.",
-      "Core commands include /portfolio, /marketupdate, /top3holdingupdate, /top3stocksupdate, and /research [ticker].",
-      "Features include holdings pagination, balance privacy toggles, source-cited analysis, and message splitting to handle long Telegram responses.",
-      "Integrates Schwab Trader APIs and OpenAI web search with OAuth token workflows and environment-based configuration.",
+      "A Telegram bot for tracking a Schwab portfolio, with AI-powered market research.",
+      "Commands: /portfolio, /marketupdate, /top3holdingupdate, /top3stocksupdate and /research [ticker].",
+      "Paginated holdings, a privacy toggle to hide balances, and research with cited sources.",
+      "Built on the Schwab Trader API (OAuth) and OpenAI web search, with clean separation between bot, API and business logic.",
     ],
   },
   {
     src: "/portfolio-images/stonk.png",
     title: "Stonk Market",
+    tagline: "A token launchpad where trading follows NYSE market hours.",
     liveLinks: [
-      { name: "Stonk Market", url: "https://www.stonk.market/" },
-      { name: "Hood Intelligence on X", url: "https://x.com/robindothood" },
+      { name: "stonk.market", url: "https://www.stonk.market/" },
     ],
     githubLink: "https://github.com/stonk-exchange",
     description: [
-      "Token launchpad with timelocked tokens to NYSE hours.  At the moment on Ethereum Sepolia and looking to launch on Base mainnet Autumn 2025.",
+      "A token launchpad where tokens are timelocked to NYSE trading hours: they trade when the stock market is open and pause when it closes.",
+    ],
+  },
+  {
+    // shortcut: hotlinked X banner, breaks if the banner changes; copy into public/ to pin it
+    src: "https://pbs.twimg.com/profile_banners/1976291072423702528/1794589029/1500x500",
+    title: "Hood Intelligence",
+    tagline: "Wallet tracking for Robinhood Chain, so you don't have to.",
+    liveLinks: [
+      { name: "@robindothood on X", url: "https://x.com/robindothood" },
+      { name: "Telegram", url: "https://t.me/hoodintelpublic" },
+    ],
+    githubLink: null,
+    description: [
+      "Every dump on Robinhood Chain leaves wallets behind. Hood Intelligence follows them so you don't have to.",
+      "Alerts are posted on X and in a public Telegram channel.",
     ],
   },
   {
     src: "https://i.imgur.com/uMoBVbS.png",
     title: "TeaLink",
-    liveLinks: [
-      {
-        name: "TeaLink",
-        url: "https://tealink.vercel.app/",
-      },
-    ],
+    tagline: "Peer-to-peer betting on news headlines, settled by Chainlink.",
+    liveLinks: [{ name: "Live demo", url: "https://tealink.vercel.app/" }],
     githubLink: "https://github.com/oscarthedev15/CLhackathon2022",
     description: [
-      "Chainlink hackathon submission - an early prediction market project using Chainlink oracles and Chainlink functions.",
-      "First open-ended peer-to-peer news betting protocol on Ethereum. Create custom bets on events using NewsAPI.org to verify outcomes by searching for keywords in headlines.",
+      "An early prediction market built for the 2022 Chainlink hackathon.",
+      "Anyone can create a bet on a future news event. Chainlink Functions checks NewsAPI.org headlines for keywords to settle the outcome.",
     ],
   },
 ];
@@ -119,7 +101,7 @@ const AnimatedItems = () => {
               onClick={() => setSelectedItem(item)}
               className="glass group w-full h-full text-left rounded-2xl p-4 flex flex-col gap-3 transition-transform duration-200 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500"
             >
-              <div className="aspect-[4/3] w-full rounded-xl bg-white/70 flex items-center justify-center overflow-hidden">
+              <div className="aspect-[4/3] w-full rounded-xl bg-neutral-100 flex items-center justify-center overflow-hidden">
                 <img
                   src={item.src}
                   alt=""
@@ -127,7 +109,7 @@ const AnimatedItems = () => {
                 />
               </div>
               <h3 className="font-bold text-lg leading-tight text-neutral-900">{item.title}</h3>
-              <p className="text-sm text-neutral-700 line-clamp-2">{item.description[0]}</p>
+              <p className="text-sm leading-relaxed text-neutral-700">{item.tagline}</p>
             </button>
           </motion.li>
         ))}
